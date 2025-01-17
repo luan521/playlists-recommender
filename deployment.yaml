@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: luancosta-playlist-recommender
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: luancosta-playlist-recommender
+  template:
+    metadata:
+      labels:
+        app: luancosta-playlist-recommender
+    spec:
+      containers:
+      - name: luancosta-playlist-recommender
+        image: luan61/playlists-recommender-system:0.1
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: model-volume
+          mountPath: /app
+      volumes:
+      - name: model-volume
+        persistentVolumeClaim:
+          claimName: project2-pv-luancosta-claim
