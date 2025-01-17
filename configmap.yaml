@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: generate-model-env
+  namespace: luancosta
+data:
+  minSupRatio: "0.05"
+  minConf: "0"
+  model_folder: "/app/model"
+  dataset_path: "/app/dataset/2023_spotify_ds1.csv"

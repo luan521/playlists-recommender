@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: luancosta-playlist-recommender
+spec:
+  selector:
+    app: luancosta-playlist-recommender
+  ports:
+    - protocol: TCP
+      port: 52042
+      targetPort: 8000

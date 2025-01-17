@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: generate-model-ml
+  namespace: luancosta
+spec:
+  template:
+    spec:
+      containers:
+      - name: generate-model-ml
+        image: luan61/ml-fit-playlists-recommender:0.1
+        command: ["python", "model.py"]
+        envFrom:
+        - configMapRef:
+            name: generate-model-env
+        volumeMounts:
+        - name: model-volume
+          mountPath: /app
+      restartPolicy: Never
+      volumes:
+      - name: model-volume
+        persistentVolumeClaim:
+          claimName: project2-pv-luancosta-claim
+  backoffLimit: 4
