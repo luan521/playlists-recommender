@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: luancosta-playlist-recommender
-        image: luan61/playlists-recommender-system:0.1
+        image: luan61/playlists-recommender-system:0.3
         ports:
         - containerPort: 8000
         volumeMounts:

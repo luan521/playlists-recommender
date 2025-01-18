@@ -70,7 +70,8 @@ if __name__ == "__main__":
             
             # Create the response
             response = {
-                "songs": recommendations
+                "songs": recommendations,
+                "message": "Docker image updated."
             }
             return jsonify(response), 200
         except Exception as e:
