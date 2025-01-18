@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: generate-model-ml
+  name: generate-model-ml-2
   namespace: luancosta
 spec:
   template:

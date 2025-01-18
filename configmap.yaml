@@ -7,4 +7,4 @@ data:
   minSupRatio: "0.05"
   minConf: "0"
   model_folder: "/app/model"
-  dataset_path: "/app/dataset/2023_spotify_ds1.csv"
+  dataset_path: "/app/dataset/2023_spotify_ds2.csv"
