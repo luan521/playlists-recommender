@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: generate-model-ml
-        image: luan61/ml-fit-playlists-recommender:0.1
+        image: luan61/playlists-recommender-ml-fit:0.1
         command: ["python", "model.py"]
         envFrom:
         - configMapRef:
